@@ -12,19 +12,27 @@ public class LotteryPro {
 		System.out.println("請輸入 1~9 不要哪個數字");
 		LotteryPro lotto = new LotteryPro();
 		int sum = lotto.arrayCount();
-		int[] x = new int[sum];
-		lotto.print(x);
+//		int[] x = new int[sum];
+		int[] y = lotto.array();
+		lotto.print(y);
+//		lotto.print(x);
 		System.out.println("總共有" + sum + "個數字");
-		
-	
 
-		System.out.println();
-		System.out.println(x[sum-1]);
-		System.out.println(x);
-		System.out.println(x[(int)(Math.random()*sum)]);
+		System.out.println(y[]);
 	}
 
-	
+	public int[] array() {
+
+		int[] data = new int[arrayCount()];
+		int count =-1;
+		count++;
+		for (int i = 1; i <= 49; i++) {
+			if (i / 10 != a && i % 10 != a) {	
+			 data[count++]= i;
+			}
+		}
+		return data;
+	}
 	
 	public void print(int[] data) {
 		for (int i = 1; i <= 49; i++) {
