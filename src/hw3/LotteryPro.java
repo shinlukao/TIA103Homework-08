@@ -13,22 +13,30 @@ public class LotteryPro {
 		System.out.println("請輸入 1~9 不要哪個數字");
 		LotteryPro lotto = new LotteryPro();
 		int sum = lotto.arrayCount();
-//		int[] x = new int[sum];
 		int[] y = lotto.array();
 		lotto.print(y);
-//		lotto.print(x);
 		System.out.println("總共有" + sum + "個數字");
+		System.out.println("==============================================================");
+		System.out.println("幫你隨機選出以下 6 個號碼");
 
 		int n = 0;
-		while (n < 6) {  //由y[]裡取出6個數字，並將取過得值改成"0"
-			int strange = (int) ((Math.random() * sum) ) ;
+		while (n < 6) { // 由y[]裡取出6個數字，並將取過得值改成"0"
+			int strange = (int) ((Math.random() * sum));
 			if (y[strange] != 0) {
 				System.out.print(y[strange] + " ");
 				y[strange] = 0;
 				n++;
 			}
 		}
+		// 使用 For 迴圈會因為固定計算次數而結束，不一定可以得到想要的幾個數字
 
+//		for(int n = 0 ; n < 6 ; n++) {
+//			int strange = (int) ((Math.random() * sum) ) ;
+//			if (y[strange] != 0) {
+//				System.out.print(y[strange] + " ");
+//				y[strange] = 0;
+//			}
+//		}
 	}
 
 	public int[] array() { // 拿到array data
