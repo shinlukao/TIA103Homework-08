@@ -9,7 +9,7 @@ import java.util.Scanner;
 //3. x與y皆正確情況下,會顯示運算後結果
 public class CalTest {
 
-	public static void main(String[] args) throws InputMismatchException {
+	public static void main(String[] args)  {
 		int a;
 		int b;
 //	    for(int i = 0 ;i <1 ; i++) 
@@ -29,11 +29,11 @@ public class CalTest {
 				i++;
 			} catch (CalException ca) {
 				System.out.println(ca.getMessage());
-				i--;
+//				i--;
 			} catch (InputMismatchException imt) {
 
 				System.out.println("輸入格式錯誤");
-				i--;
+//				i--;
 			}
 
 	}
