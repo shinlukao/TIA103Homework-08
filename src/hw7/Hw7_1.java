@@ -25,17 +25,17 @@ public class Hw7_1 {
 		while ((c = br.readLine()) != null) { // 讀到檔案的尾端時,readline()會回傳null
 			
 				totalcount += c.length();
-				
+				//使用 replace ("要被取代的","取代後的")，將空格給避免計算
 				wordCount += c.replace(" ","").length(); 
 				
 			System.out.println(c);
 			System.out.flush();
 			j++;
-//			int i = br.readLine().length();
-//			count += i;
-//			System.out.println(br.readLine().length());
 			
 		}
+		
+		//用 read() 方法得到的會是連同，換行及空格皆納入計算
+		
 //		while ((c = in.read()) != -1) { // 讀到檔案的尾端時,read()會回傳-1
 //			
 //			System.out.print((char) c);
