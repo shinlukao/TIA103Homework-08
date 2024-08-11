@@ -15,7 +15,7 @@ public class Hw7_3CopyFile {
 		
 		Hw7_3CopyFile cp = new Hw7_3CopyFile();
 		//呼叫copyFile方法，將a檔案複製到b檔案
-		cp.copyFile("C:\\TIA103_Workspace\\Homework1.pdf", "C:\\TIA103_Workspace\\2.pdf");
+		cp.copyFile("C:\\TIA103_Workspace\\1.txt", "C:\\TIA103_Workspace\\2.txt");
 	}
 	//建立copyFile方法，將a檔案複製到b檔案
 	public void copyFile(String x , String y){
@@ -39,6 +39,8 @@ public class Hw7_3CopyFile {
 			//將	BufferedOutputStream 從a檔寫入b檔
 				bw.write(c);
 				bw.flush();
+
+				//將ch陣列[i++]寫入檔案大小，以利下方在Console印出確認
 //				ch[i++] = (byte) c;
 			}
 //			System.out.print(new String(ch));
