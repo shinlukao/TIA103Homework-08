@@ -11,7 +11,7 @@ import java.util.List;
 //• 移除不是java.lang.Number相關的物件
 //• 再次印出這個集合物件的所有元素,觀察是否已將非Number相關的物件移除成功
 public class Hw8_1Collection {
-	
+
 	public static void main(String[] args) {
 		Object obje = new Object();
 		List Collection = new ArrayList();
@@ -25,49 +25,47 @@ public class Hw8_1Collection {
 		Collection.add(obje);
 		Collection.add("Snoopy");
 		Collection.add(BigInteger("1000"));
-		
+
 		System.out.println("toString()=" + Collection);
 		System.out.println("元素個數=" + Collection.size());
 		System.out.println("使用for迴圈印出元素");
-		
-		for(int i = 0 ; i < Collection.size() ; i++) {
+
+		for (int i = 0; i < Collection.size(); i++) {
 			Object obj = Collection.get(i);
 			System.out.print(obj + " ");
 		}
 		System.out.println();
 		System.out.println("使用Iterator印出元素");
-		
+
 		Iterator ite = Collection.iterator();
-		while(ite.hasNext()) {
+		while (ite.hasNext()) {
 			System.out.print(ite.next() + " ");
 		}
-		
+
 		System.out.println();
 		System.out.println("使用for each 印出元素");
-		for(Object xxx : Collection) {
+		for (Object xxx : Collection) {
 			System.out.print(xxx + " ");
 		}
 		System.out.println();
-		
-		
-		//將 Number 以外物件移除，使用remove(),並且移除後需要i--,因為會往前遞補
-		for(int i = 0 ; i < Collection.size() ; i++) {
-			if(!((Collection.get(i)) instanceof Number)) {
+
+		// 將 Number 以外物件移除，使用remove(),並且移除後需要i--,因為會往前遞補
+		for (int i = 0; i < Collection.size(); i++) {
+			if (!((Collection.get(i)) instanceof Number)) {
 				Collection.remove(i);
 				i--;
-			}else {
+			} else {
 //				System.out.print(Collection.get(i) + " ");
 			}
 		}
-		
+
 		System.out.println("將 Number 以外物件移除後印出");
-		
-		for(int i = 0 ; i < Collection.size() ; i++) {
+
+		for (int i = 0; i < Collection.size(); i++) {
 			Object obj = Collection.get(i);
 			System.out.print(obj + " ");
 		}
-		
-		
+
 	}
 
 	private static Object BigInteger(String string) {
