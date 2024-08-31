@@ -108,11 +108,11 @@ public class Hw8_2Train implements Comparable<Hw8_2Train> {
 	public int compareTo(Hw8_2Train train) {
 		//物件本身與 aEmployee 相比較，如果 retrun 正值，就表示比 aEmployee 大
 		if (this.number > train.number) {
-			return 1;
+			return -1;
 		}else if (this.number == train.number){
 			return 0;
 		} else {
-			return -1;
+			return 1;
 		}
 	}
 	
